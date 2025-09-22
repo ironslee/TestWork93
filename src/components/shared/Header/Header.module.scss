@@ -1,0 +1,85 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/variables" as *;
+
+.header {
+  color: #fff;
+}
+
+.container {
+  @include container;
+}
+
+.topbar {
+  background: $brand-2;
+  font-size: 13px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    height: 32px;
+  }
+
+  .topRight {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+  }
+
+  .loginLink {
+    padding: 2px 6px;
+    border: 1px solid;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .loginLink:hover {
+    color: $muted;
+  }
+
+  .logout {
+    padding: 2px 6px;
+    border: 1px solid;
+    border-radius: 8px;
+    background: transparent;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .logout:hover {
+    color: $muted;
+  }
+
+  .user {
+    color: #fff;
+  }
+}
+
+.brandRow {
+  background: $brand;
+
+  .container {
+    @include container;
+
+    display: flex;
+    align-items: center;
+    height: 90px;
+  }
+}
+
+.logo {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+
+  span {
+    color: $accent;
+  }
+}
+
+.redline {
+  height: 3px;
+  background: $accent;
+}

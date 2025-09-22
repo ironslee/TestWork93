@@ -1,0 +1,33 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/variables" as *;
+
+.link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card {
+  @include card;
+}
+
+.body {
+  text-align: center;
+}
+
+.title {
+  margin: 6px 0;
+  font-weight: 600;
+}
+
+.meta {
+  color: $muted;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.price {
+  margin: 6px 0 10px;
+  color: $accent;
+  font-weight: 700;
+}

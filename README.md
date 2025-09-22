@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AbeloShop — Test Task (Next.js + TypeScript)
 
-## Getting Started
+A web application of an online store built with the public API DummyJSON.
+The functionality includes JWT-based authentication, browsing product lists and categories, and viewing product details.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js (App Router)**
+- **TypeScript**
+- **Zustand**
+- **Axios**
+- **SCSS Modules**
+- **Prettier, ESLint, Stylelint**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+- **Authentication**
+  - login form (validation: at least 3 characters, fields must not be empty)
+  - on successful login the token and user data are persisted
+  - redirect to the homepage after login
+  - error message displayed in case of failed login
 
-To learn more about Next.js, take a look at the following resources:
+- **Navigation & Pages**
+  - Header with menu: Home, Hot Deals, Categories, All Products, Laptops, Smartphones
+  - Footer with current year and email (for authenticated users)
+  - Highlight for the active navigation item
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Categories**
+  - categories list fetched from the API
+  - each category links to a page `/category/[slug]`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Products**
+  - product list with `Load more` pagination
+  - product card (image, title, category, price, "Add to cart" button for authenticated users)
+  - product detail page `/product/[id]` with image gallery and description
 
-## Deploy on Vercel
+- **Loading indicators**
+  - server pages use built-in `loading.tsx`
+  - client-side requests (e.g., login form) are accompanied by a local `loading` state
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Install & run
+
+`npm install`
+
+`npm run dev`

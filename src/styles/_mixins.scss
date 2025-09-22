@@ -1,0 +1,30 @@
+@use "variables" as *;
+
+@mixin container {
+  max-width: $container;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@mixin card {
+  padding: 20px;
+  overflow: hidden;
+  border: 1px solid $border;
+  border-radius: $radius;
+  background: $bg;
+  transition:
+    transform 0.08s ease,
+    box-shadow 0.12s ease,
+    border-color 0.12s ease;
+
+  &:hover {
+    box-shadow: $shadow;
+    transform: translateY(-2px);
+    border-color: #ddd;
+  }
+
+  .img {
+    width: 100%;
+    object-fit: contain;
+  }
+}

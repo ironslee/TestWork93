@@ -1,0 +1,90 @@
+{
+  "extends": ["stylelint-config-standard-scss"],
+  "plugins": ["stylelint-order"],
+  "customSyntax": "postcss-scss",
+  "rules": {
+    "order/properties-order": [
+      [
+        "display",
+        "position",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "z-index",
+
+        "flex",
+        "flex-flow",
+        "flex-direction",
+        "flex-wrap",
+        "flex-grow",
+        "flex-shrink",
+        "flex-basis",
+        "justify-content",
+        "align-items",
+        "align-content",
+        "align-self",
+        "gap",
+
+        "box-sizing",
+        "width",
+        "min-width",
+        "max-width",
+        "height",
+        "min-height",
+        "max-height",
+
+        "margin",
+        "margin-top",
+        "margin-right",
+        "margin-bottom",
+        "margin-left",
+
+        "padding",
+        "padding-top",
+        "padding-right",
+        "padding-bottom",
+        "padding-left",
+
+        "overflow",
+        "overflow-x",
+        "overflow-y",
+
+        "border",
+        "border-top",
+        "border-right",
+        "border-bottom",
+        "border-left",
+        "border-radius",
+
+        "background",
+        "background-color",
+        "background-image",
+        "background-position",
+        "background-size",
+        "background-repeat",
+
+        "color",
+        "font",
+        "font-family",
+        "font-size",
+        "font-weight",
+        "line-height",
+        "text-align",
+        "text-decoration",
+        "white-space",
+        "letter-spacing",
+
+        "opacity",
+        "box-shadow",
+        "transform",
+        "transition"
+      ],
+      { "unspecified": "bottomAlphabetical" }
+    ],
+
+    "selector-class-pattern": null,
+    "no-descending-specificity": null,
+    "scss/percent-placeholder-pattern": null
+  }
+}

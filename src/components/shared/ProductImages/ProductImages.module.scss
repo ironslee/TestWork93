@@ -1,0 +1,43 @@
+@use "@/styles/variables" as *;
+
+.main {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  border: 1px solid $border;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.thumbBtn {
+  border: 1px solid $border;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $muted;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.active {
+  box-shadow: 0 0 0 2px rgb(0 0 0 / 6%);
+  border-color: $muted;
+}
+
+.thumbImg {
+  display: block;
+  width: 88px;
+  height: 88px;
+  border-radius: 6px;
+  object-fit: cover;
+}
